@@ -12,8 +12,16 @@ export class AppComponent {
   title = 'TYPING_APP';
   actionCall = 'Test Your Typing Skill!'
   randomText = faker.lorem.sentence();
+  inputText = '';
+  textMatch = false;
 
   updateLorem(){
     this.randomText = faker.lorem.sentence();
   };
+
+  onTypeCheck(value: string){
+    console.log(value);
+    this.inputText = value;
+   
+  }
 }
