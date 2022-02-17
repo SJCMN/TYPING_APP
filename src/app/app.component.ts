@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { faker } from '@faker-js/faker';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +11,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'TYPING_APP';
   actionCall = 'Test Your Typing Skill!'
+  randomText = faker.lorem.sentence();
+
+  updateLorem(){
+    this.randomText = faker.lorem.sentence();
+  };
 }
