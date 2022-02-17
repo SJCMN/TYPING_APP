@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TYPING_APP';
+  actionCall = 'Test Your Typing Skill!'
 }
