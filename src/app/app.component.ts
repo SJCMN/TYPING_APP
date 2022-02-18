@@ -18,6 +18,7 @@ export class AppComponent {
 
   updateLorem() {
     this.randomText = faker.lorem.sentence();
+    this.inputText = '';
     // updateLorem on enter
     // clear input on enter || textMatch
     
@@ -38,8 +39,4 @@ export class AppComponent {
  
   }
 
-  // alternative comparison
-  // if (value === this.inputText){
-  //   this.textMatch = !this.textMatch;
-  // }
 }
