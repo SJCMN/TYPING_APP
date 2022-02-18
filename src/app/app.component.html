@@ -12,10 +12,20 @@
   <div class="columns is-centered">
     <div class="box column is-one-third">
       <h1 class="title has-text-centered">{{ actionCall }}</h1>
-      <h2 class="has-text-centered" (click)="updateLorem()">{{ randomText }}</h2>
+
+      
+      <h2 class="has-text-centered" (click)="updateLorem()">
+        <span [class]="checkType(letter, inputText[i])"
+        *ngFor="
+        let letter of randomText.split('');
+        let i = index;        
+        "
+        >{{letter}}</span>
+      </h2>
+
       <div class="field">
         <input class="input" #typeInput id="typeInput" placeholder="Type Here!"
-        (input)="onTypeCheck(typeInput.value)"
+        (input)="onInput(typeInput.value)"
         />
       </div>
       <div class="box has-text-centered" *ngIf="inputText === randomText">
